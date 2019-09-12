@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Avision</title>
+  </head>
+  <style>
+  .product_pic{
+	width:240px;
+	height:240px;
+  }
+  .left-side{
+	float:left;
+	width:20%;
+	padding-left: 50px;
+    padding-right: 30px;
+  }
+  .right-side{
+	float:left;
+	width:80%;
+  }
+  .product{
+	float:left;
+	margin-left:34px;
+	margin-bottom:35px;
+	width:245px;
+	height:450px;
+	border-color: gray;
+    border-style: solid;
+  }
+  .product_header .form-check{
+	margin-right: 15px;
+  }
+  .product_title{
+	text-align: center;
+  }
+  .product_description ul{
+	 margin-left: 30px;
+  }
+  .product_btn{
+	text-align: center;
+	}
+  /*
+  .product_btn a{
+	width:125px;
+	height:35px;
+	background-color: #FFFFFF;
+    color: #356796;
+    border: 1px solid #356796;
+    font-size: 12px;
+  }
+  
+  .product_btn a:hover{
+	background-color: #356796;
+    color: #FFFFF;
+  }
+  */
+  .compare{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height:120px;
+	background-color: beige;
+	color: black;
+	text-align: center;
+  }
+  
+  .compare img{
+	width: 120px;
+	height:120px;
+  }
+  
+  </style>
+  <body>
+    <div class="left-side">
+		<div class="input-group">
+		  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+		  <div class="input-group-append">
+			<span class="input-group-text">O</span>
+		  </div>
+		</div>
+		<div>產品類型</div>
+		<div class="form-check">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			掃描器
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			文件掃描系列
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			平台掃描系列
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			智慧可攜式掃描
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			文件直通車系列
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			多功能掃描系列
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			生產級掃描儀
+		  </label>
+		</div>
+		<div class="form-check">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			雷射印表機
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			印表機
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			多功能事務系列
+		  </label>
+		</div>
+		<hr>
+		<div>產品功能</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			A3
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			A4
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			USB3.0
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			A4
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			A3
+		  </label>
+		</div>
+		<div class="form-check ml-3">
+		  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  <label class="form-check-label" for="defaultCheck1">
+			USB3.0
+		  </label>
+		</div>
+	</div>
+	<div class="right-side">
+		<div class="product">
+			<div class="product_header">
+				<div class="form-check text-right">
+				  <input class="form-check-input add-compare" type="checkbox" value="1" id="product_1">
+				  <label class="form-check-label" for="defaultCheck1">
+					加入比較
+				  </label>
+				</div>
+			</div>
+			<div class="product_img">
+				<img src="images/all_product_01.png">
+			</div>
+			<div class="product_title">
+				AD130
+			</div>
+			<div class="product_description">
+				<ul>
+					<li>列點特色1</li>
+					<li>列點特色2</li>
+					<li>列點特色3</li>
+				</ul>
+			</div>
+			<div class="product_btn">
+				<a class="btn btn-primary">查看產品詳情</a>
+			</div>
+		</div>
+		<div class="product">
+			<div class="product_header">
+				<div class="form-check text-right">
+				  <input class="form-check-input add-compare" type="checkbox" value="2" id="product_2">
+				  <label class="form-check-label" for="defaultCheck1">
+					加入比較
+				  </label>
+				</div>
+			</div>
+			<div class="product_img">
+				<img src="images/all_product_02.png">
+			</div>
+			<div class="product_title">
+				AD130
+			</div>
+			<div class="product_description">
+				<ul>
+					<li>列點特色1</li>
+					<li>列點特色2</li>
+					<li>列點特色3</li>
+				</ul>
+			</div>
+			<div class="product_btn">
+				<a class="btn btn-primary">查看產品詳情</a>
+			</div>
+		</div><div class="product">
+			<div class="product_header">
+				<div class="form-check text-right">
+				  <input class="form-check-input add-compare" type="checkbox" value="3" id="product_3">
+				  <label class="form-check-label" for="defaultCheck1">
+					加入比較
+				  </label>
+				</div>
+			</div>
+			<div class="product_img">
+				<img src="images/all_product_03.png">
+			</div>
+			<div class="product_title">
+				AD130
+			</div>
+			<div class="product_description">
+				<ul>
+					<li>列點特色1</li>
+					<li>列點特色2</li>
+					<li>列點特色3</li>
+				</ul>
+			</div>
+			<div class="product_btn">
+				<a class="btn btn-primary">查看產品詳情</a>
+			</div>
+		</div><div class="product">
+			<div class="product_header">
+				<div class="form-check text-right">
+				  <input class="form-check-input add-compare" type="checkbox" value="4" id="product_4">
+				  <label class="form-check-label" for="defaultCheck1">
+					加入比較
+				  </label>
+				</div>
+			</div>
+			<div class="product_img">
+				<img src="images/all_product_04.png">
+			</div>
+			<div class="product_title">
+				AD130
+			</div>
+			<div class="product_description">
+				<ul>
+					<li>列點特色1</li>
+					<li>列點特色2</li>
+					<li>列點特色3</li>
+				</ul>
+			</div>
+			<div class="product_btn">
+				<a class="btn btn-primary">查看產品詳情</a>
+			</div>
+		</div>
+	</div>
+	<div class="compare">
+		<div class="compare_close" style="float:right">X</div>
+		<div style="float:left">產品比較</div>
+		<div class="compare_list" style="float:left">
+		</div>
+		<div style="float:left"><a class="btn btn-outline-secondary" href="compare.html">立即比較</a></div>
+	</div>
+	<!--div class="container-fluid">
+		<div class="row">
+			<div class="col-4">
+			  <div class="input-group">
+				  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+				  <div class="input-group-append">
+					<span class="input-group-text">O</span>
+				  </div>
+				</div>
+				<div>產品類型</div>
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					掃描器
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					文件掃描系列
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					平台掃描系列
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					智慧可攜式掃描
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					文件直通車系列
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					多功能掃描系列
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					生產級掃描儀
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					雷射印表機
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					印表機
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					多功能事務系列
+				  </label>
+				</div>
+				<hr>
+				<div>產品功能</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					A3
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					A4
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					USB3.0
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					A4
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					A3
+				  </label>
+				</div>
+				<div class="form-check ml-3">
+				  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+				  <label class="form-check-label" for="defaultCheck1">
+					USB3.0
+				  </label>
+				</div>
+			</div>
+			<div class="col-8">
+				<div class="row">
+					<div class="col-3">
+						<div class="card">
+						  <div class="card-body">
+							<h5 class="card-title">
+								<div class="form-check mr-3">
+								  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								  <label class="form-check-label" for="defaultCheck1">
+									加入比較
+								  </label>
+								</div>
+							</h5>
+							<img class="product_pic" src="images/all_product_01.png">
+							<a href="#" class="btn btn-primary">查看產品詳情</a>
+						  </div>
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+					<div class="col-3">
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+			</div>
+		  </div>
+	</div-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+	$(".compare").hide();
+	var json_str = localStorage.getItem("product-compare");
+	
+	if(JSON.parse(json_str)){
+		
+		var arr = JSON.parse(json_str);
+		for(x in arr){
+			$("#product_"+arr[x]).prop('checked',true);
+			$(".compare_list").append("<img src='images/all_product_0"+arr[x]+".png'>");
+		}
+		if(arr.length > 0){
+			$(".compare").show();
+		}
+	}
+	
+	$(".add-compare").click(function(){
+		$(".compare").show();
+		var json_str = localStorage.getItem("product-compare");
+		if(JSON.parse(json_str)){
+			var arr = JSON.parse(json_str);
+		}else{
+			var arr = [];
+		}
+		
+		if(arr.indexOf($(this).val()) > -1){
+			arr.splice(arr.indexOf($(this).val()), 1);
+		}else{
+			arr.push($(this).val());
+		}
+		
+		//var json_str = JSON.stringify(arr);
+		localStorage.setItem("product-compare", JSON.stringify(arr));
+		$(".compare_list").empty();
+		for(x in arr){
+			$(".compare_list").append("<img src='images/all_product_0"+arr[x]+".png'>");
+		}
+		
+	});
+	$(".compare_close").click(function(){
+		$(".compare").hide();
+		localStorage.setItem("product-compare", JSON.stringify([]));
+	});
+	/*
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length,c.length);
+			}
+		}
+		return "";
+	}
+	
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	*/
+	</script>
+  </body>
+</html>
