@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Avision</title>
+  </head>
+  <style>
+	.bread{
+		margin-top:100px;
+	}
+	.main{
+		margin-top:20px;
+		background-color:#FAFAFA;
+		padding: 50px 0px 50px 165px;
+		height:600px;
+	}
+	
+	
+	.main-left{
+		float:left;
+		margin-right:30px;
+	}
+	
+	.main-right{
+		float:left;
+	}
+	
+	.main-title{
+	 margin-bottom:10px;
+	}
+	.main-left-img img{
+		width:539px;
+		height:303px;
+		margin-bottom:20px;
+	}
+	
+	.main-left-img-list img{
+		float:left;
+		width:122px;
+		height:122px;
+		margin-right:17px;
+	}
+	
+  </style>
+  <body>
+    <div class="bread">
+		產品 > 掃描器 > 生產及掃瞄儀 > AN240
+	</div>
+	<div class="main">
+		<div class="main-title">AN240</div>
+		<div class="main-left">
+			<div class="main-left-img">
+				<img src="images/all_product_01.png">
+			</div>
+			<div class="main-left-img-list">
+				<img src="images/all_product_01.png">
+				<img src="images/all_product_01.png">
+				<img src="images/all_product_01.png">
+				<img src="images/all_product_01.png">
+			</div>
+		</div>
+		<div class="main-right">
+			<div>快速、性能優越的</div>
+			<div><p></p></div>
+			<div>功能與規格:</div>
+			<div>認證:</div>
+			<div>認證:</div>
+			<div>聯絡我們 加入比較</div>
+		</div>
+	</div>
+	<div class="tab">
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+	$(".compare").hide();
+	var json_str = localStorage.getItem("product-compare");
+	
+	if(JSON.parse(json_str)){
+		
+		var arr = JSON.parse(json_str);
+		for(x in arr){
+			$("#product_"+arr[x]).prop('checked',true);
+			$(".compare_list").append("<img src='images/all_product_0"+arr[x]+".png'>");
+		}
+		if(arr.length > 0){
+			$(".compare").show();
+		}
+	}
+	
+	$(".add-compare").click(function(){
+		$(".compare").show();
+		var json_str = localStorage.getItem("product-compare");
+		if(JSON.parse(json_str)){
+			var arr = JSON.parse(json_str);
+		}else{
+			var arr = [];
+		}
+		
+		if(arr.indexOf($(this).val()) > -1){
+			arr.splice(arr.indexOf($(this).val()), 1);
+		}else{
+			arr.push($(this).val());
+		}
+		
+		//var json_str = JSON.stringify(arr);
+		localStorage.setItem("product-compare", JSON.stringify(arr));
+		$(".compare_list").empty();
+		for(x in arr){
+			$(".compare_list").append("<img src='images/all_product_0"+arr[x]+".png'>");
+		}
+		
+	});
+	$(".compare_close").click(function(){
+		$(".compare").hide();
+		localStorage.setItem("product-compare", JSON.stringify([]));
+	});
+	/*
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length,c.length);
+			}
+		}
+		return "";
+	}
+	
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	*/
+	</script>
+  </body>
+</html>
