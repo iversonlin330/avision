@@ -19,8 +19,9 @@
 	line-height:1.8em;
   }
   .product_pic{
-	width:240px;
-	height:240px;
+	width:100%;
+	//width:240px;
+	//height:240px;
   }
   .left-side{
 	float:left;
@@ -28,6 +29,11 @@
 	padding-left: 50px;
     padding-right: 30px;
 	background-color: #FAFAFA;
+  }
+  
+  #sidebar{
+	background-color: #FAFAFA;
+	height: 100vh;
   }
   
   .search {
@@ -78,6 +84,11 @@
 	font-size: 12px;
   }
   
+   .card-title .form-check{
+	//margin-right: 15px;
+	font-size: 12px;
+  }
+  
   .product_header input{
 	width: 15px;
     height: 15px;
@@ -96,8 +107,8 @@
   .product_description ul{
 	font-size: 12px;
 	color: #9B9B9B;
-	 margin-left: 30px;
-	 margin-bottom: 20px;
+	//margin-left: 30px;
+	margin-bottom: 20px;
   }
   .product_btn{
 	text-align: center;
@@ -105,8 +116,8 @@
 	}
 
   .product_btn a{
-	width:125px;
-	height:35px;
+	//width:125px;
+	//height:35px;
 	background-color: #FFFFFF;
     color: #356796;
     border: 1px solid #356796;
@@ -127,7 +138,7 @@
 	background-color: beige;
 	color: black;
 	text-align: center;
-	padding-left:165px;
+	//padding-left:165px;
   }
   
   .compare_close{
@@ -153,8 +164,8 @@
   }
   
   .compare img{
-	width: 65px;
-	height:65px;
+	//width: 65px;
+	max-height:65px;
 	margin-bottom:10px;
   }
   
@@ -167,7 +178,7 @@
   
   </style>
   <body>
-    <div class="left-side">
+    <!--div class="left-side">
 		<div class="search">
 		<div class="input-group">
 		  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
@@ -386,10 +397,10 @@
 		<div class="compare_list" style="float:left">
 		</div>
 		<div class="compare_btn" style="float:left"><a class="btn btn-outline-secondary" href="compare.html">立即比較</a></div>
-	</div>
-	<!--div class="container-fluid">
+	</div-->
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-4">
+			<div id="sidebar" class="col-md-3 d-none d-md-block">
 			  <div class="input-group">
 				  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
 				  <div class="input-group-append">
@@ -496,34 +507,147 @@
 				  </label>
 				</div>
 			</div>
-			<div class="col-8">
+			<div class="col-md-9 col-sm-12">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-md-3 col-sm-6 col-6">
 						<div class="card">
 						  <div class="card-body">
 							<h5 class="card-title">
-								<div class="form-check mr-3">
-								  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								<div class="form-check text-right">
+								  <input class="form-check-input add-compare" type="checkbox" value="1" id="product_1">
 								  <label class="form-check-label" for="defaultCheck1">
 									加入比較
 								  </label>
 								</div>
 							</h5>
 							<img class="product_pic" src="images/all_product_01.png">
-							<a href="#" class="btn btn-primary">查看產品詳情</a>
+							<div class="product_title">
+								AD130
+							</div>
+							<div class="product_description">
+								<ul>
+									<li>列點特色1</li>
+									<li>列點特色2</li>
+									<li>列點特色3</li>
+								</ul>
+							</div>
+							<div class="product_btn">
+								<a class="btn btn-primary" href="product-detail.html">查看產品詳情</a>
+							</div>
 						  </div>
 						</div>
 					</div>
-					<div class="col-3">
+					<div class="col-md-3 col-sm-6 col-6">
+						<div class="card">
+						  <div class="card-body">
+							<h5 class="card-title">
+								<div class="form-check text-right">
+								  <input class="form-check-input add-compare" type="checkbox" value="2" id="product_2">
+								  <label class="form-check-label" for="defaultCheck1">
+									加入比較
+								  </label>
+								</div>
+							</h5>
+							<img class="product_pic" src="images/all_product_02.png">
+							<div class="product_title">
+								AD130
+							</div>
+							<div class="product_description">
+								<ul>
+									<li>列點特色1</li>
+									<li>列點特色2</li>
+									<li>列點特色3</li>
+								</ul>
+							</div>
+							<div class="product_btn">
+								<a class="btn btn-primary">查看產品詳情</a>
+							</div>
+						  </div>
+						</div>
 					</div>
-					<div class="col-3">
+					<div class="col-md-3 col-sm-6 col-6">
+						<div class="card">
+						  <div class="card-body">
+							<h5 class="card-title">
+								<div class="form-check text-right">
+								  <input class="form-check-input add-compare" type="checkbox" value="3" id="product_3">
+								  <label class="form-check-label" for="defaultCheck1">
+									加入比較
+								  </label>
+								</div>
+							</h5>
+							<img class="product_pic" src="images/all_product_03.png">
+							<div class="product_title">
+								AD130
+							</div>
+							<div class="product_description">
+								<ul>
+									<li>列點特色1</li>
+									<li>列點特色2</li>
+									<li>列點特色3</li>
+								</ul>
+							</div>
+							<div class="product_btn">
+								<a class="btn btn-primary">查看產品詳情</a>
+							</div>
+						  </div>
+						</div>
 					</div>
-					<div class="col-3">
+					<div class="col-md-3 col-sm-6 col-6">
+						<div class="card">
+						  <div class="card-body">
+							<h5 class="card-title">
+								<div class="form-check text-right">
+								  <input class="form-check-input add-compare" type="checkbox" value="4" id="product_4">
+								  <label class="form-check-label" for="defaultCheck1">
+									加入比較
+								  </label>
+								</div>
+							</h5>
+							<img class="product_pic" src="images/all_product_04.png">
+							<div class="product_title">
+								AD130
+							</div>
+							<div class="product_description">
+								<ul>
+									<li>列點特色1</li>
+									<li>列點特色2</li>
+									<li>列點特色3</li>
+								</ul>
+							</div>
+							<div class="product_btn">
+								<a class="btn btn-primary">查看產品詳情</a>
+							</div>
+						  </div>
+						</div>
 					</div>
 				</div>
 			</div>
 		  </div>
-	</div-->
+	</div>
+	<div class="compare">
+		<div class="row">
+			<div class="col-md-3 col-sm-3">
+				<div class="text-left pl-4 pt-4" >
+				<div>產品比較</div>
+				<div class="d-none d-md-block">右側產品皆已加入比較，至多可選擇三項或立即比較來查看比較結果。</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="row compare_list">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="compare_btn" style="float:left"><a class="btn btn-outline-secondary" href="compare.html">立即比較</a></div>
+				<div class="compare_close" style="float:right">X</div>
+			</div>
+		</div>
+		<!--div class="compare_close" style="float:right">X</div>
+		<div class="compare_title" style="float:left;text-align: left;">產品比較<br>右側產品皆已加入比較，至多可選擇三項或立即比較來查看比較結果。</div>
+		<div class="compare_list" style="float:left">
+		</div>
+		<div class="compare_btn" style="float:left"><a class="btn btn-outline-secondary" href="compare.html">立即比較</a></div-->
+	</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -539,7 +663,7 @@
 		var arr = JSON.parse(json_str);
 		for(x in arr){
 			$("#product_"+arr[x]).prop('checked',true);
-			$(".compare_list").append("<div><img src='images/all_product_0"+arr[x]+".png'><div>行動CoCo棒</div></div>");
+			$(".compare_list").append("<div class='col-md-4 col-sm-4'><div><img src='images/all_product_0"+arr[x]+".png'></div><div>行動CoCo棒</div></div>");
 		}
 		if(arr.length > 0){
 			$(".compare").show();
@@ -551,6 +675,10 @@
 		var json_str = localStorage.getItem("product-compare");
 		if(JSON.parse(json_str)){
 			var arr = JSON.parse(json_str);
+			if(arr.length >=3){
+				alert('大於三');
+				return false;
+			}
 		}else{
 			var arr = [];
 		}
@@ -565,7 +693,7 @@
 		localStorage.setItem("product-compare", JSON.stringify(arr));
 		$(".compare_list").empty();
 		for(x in arr){
-			$(".compare_list").append("<div><img src='images/all_product_0"+arr[x]+".png'><div>行動CoCo棒</div></div>");
+			$(".compare_list").append("<div class='col-md-4 col-sm-4'><div><img src='images/all_product_0"+arr[x]+".png'></div><div>行動CoCo棒</div></div>");
 		}
 		
 	});
