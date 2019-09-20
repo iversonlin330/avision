@@ -64,6 +64,36 @@
 	.cert img{
 		
 	}
+	.nav-link{
+		font-size: 16px;
+		font-weight: 500;
+		padding-bottom:15px;
+		margin-right:35px;
+		color:#9B9B9B!important;
+	}
+	
+	.nav-link.active{
+		color:#2F4D6A!important;
+		border-color: white!important;
+		border-bottom: 4px solid #356796!important;
+	}
+	
+	.nav-tabs {
+		border-bottom: white;
+	}
+	
+	.table-title{
+		color: #FFFFFF;
+		font-size:16px;
+		font-weight:500;
+	}
+	
+	.table-header{
+		background-color: #2F4D6A;
+		color: #FFFFFF;
+		font-size:16px;
+		font-weight:500;
+	}
 	
   </style>
   <body>
@@ -75,8 +105,8 @@
 			<div class="col-md-1"></div>
 			<div id="left" class="col-md-5">
 				<div class="row">
-					<div>AN240</div>
-					<div><img src="images/AN240_feature_01.jpg"></div>
+					<div class="col-md-12">AN240</div>
+					<div class="col-md-12"><img src="images/AN240_feature_01.jpg"></div>
 				</div>
 				<div class="row">
 					<div class="col-md-3 col-sm-3"><img src="images/AN240_feature_02.jpg"></div>
@@ -86,25 +116,37 @@
 				</div>
 			</div>
 			<div class="col-md-5">
-				<div>快速、性能優越的饋紙式網路掃描器</div>
+				<div class="pt-4 pb-1 font-weight-bold">快速、性能優越的饋紙式網路掃描器</div>
 				<div>弘光AN240是一個外型輕巧、不占空間，同時也是一個專門為文件及塑膠弘光AN240是一個外型輕巧、不占空間，同時也是一個專門為文件及塑膠弘光AN240是一個外型輕巧、不占空間，同時也是一個專門為文件及塑膠弘光AN240是一個外型輕巧、不占空間，同時也是一個專門為文件及塑膠弘光AN240是一個外型輕巧、不占空間，同時也是一個專門為文件及塑膠弘光AN240是一個外型輕巧、不占空間，同時也是一個專門為文件及塑膠弘光AN240是一個外型輕巧、不占空間，同時也是一個專門為文件及塑膠</div>
-				<div>功能與規格</div>
-				<div>認證</div>
-				<div class="cert">
+				<div class="pb-1 font-weight-bold">功能與規格</div>
+				<div class="pb-1 cert">
 					<img src="images/icon_duplex.png">
 					<img src="images/icon_Staples_detection.png">
-					<img src="images/icon_Ultra3sensor.png">\
+					<img src="images/icon_Ultra3sensor.png">
 				</div>
-				<div>認證</div>
-				<div>
+				<div class="pb-1 font-weight-bold">認證</div>
+				<div class="pb-1 cert">
 					<img src="images/icon_energyStar.png">
 					<img src="images/icon_BM2.png">
 				</div>
-				<div>聯絡我們 加入比較</div>
+				<div class="pb-1 font-weight-bold">認證</div>
+				<div class="pb-1">
+					<img src="images/icon_energyStar.png">
+					<img src="images/icon_BM2.png">
+				</div>
+				<div class="pt-4 pb-4">
+					<a class="btn btn-outline-secondary">聯絡我們</a>
+					<div class="form-check form-check-inline ml-3">
+					  <input class="form-check-input add-compare" type="checkbox" value="1" id="product_1">
+					  <label class="form-check-label" for="defaultCheck1">
+						加入比較
+					  </label>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-1"></div>
 		</div>
-		<div class="row mx-auto">
+		<div class="row mx-auto mt-3">
 			<ul class="nav nav-tabs mx-auto" id="myTab" role="tablist">
 			  <li class="nav-item">
 				<a class="nav-link active" id="home-tab" data-toggle="tab" href="#T1" role="tab" aria-controls="1" aria-selected="true">產品特色</a>
@@ -124,9 +166,49 @@
 			</ul>
 		</div>
 		<div class="row">
-			<div class="tab-content mx-auto" id="myTabContent">
+			<div class="tab-content col-md-12" id="myTabContent">
 			  <div class="tab-pane fade show active" id="T1" role="tabpanel" aria-labelledby="home-tab">產品特色</div>
-			  <div class="tab-pane fade" id="T2" role="tabpanel" aria-labelledby="profile-tab">產品規格</div>
+			  <div class="tab-pane fade" id="T2" role="tabpanel" aria-labelledby="profile-tab">
+			  
+			  產品規格
+
+			  <div class="accordion" id="accordionExample">
+				  <div class="card">
+					<div class="card-header table-header" id="headingOne">
+						<span class="table-title">基本規格</span>
+						<div class=" float-md-right" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+						  ﹀
+						</div>
+					</div>
+					<div id="collapse1" class="collapse show" aria-labelledby="headingOne" >
+					  <div class="card-body" style="background-color: #FAFAFA;">
+						<table>
+							<tbody>
+								<tr><td style="width:25%;">超音波重疊進紙偵測</td><td style="width:75%;">有</td></tr>
+							</tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				  <div class="card">
+					<div class="card-header table-header" id="headingOne">
+						<span class="table-title">特色</span>
+						<div class=" float-md-right" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+						  ﹀
+						</div>
+					</div>
+					<div id="collapse2" class="collapse show" aria-labelledby="headingOne" >
+					  <div class="card-body" style="background-color: #FAFAFA;">
+						<table>
+							<tbody>
+								<tr><td style="width:25%;">超音波重疊進紙偵測</td><td style="width:75%;">有</td></tr>
+							</tbody>
+						</table>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
 			  <div class="tab-pane fade" id="T3" role="tabpanel" aria-labelledby="contact-tab">下載</div>
 			  <div class="tab-pane fade" id="T4" role="tabpanel" aria-labelledby="contact-tab">配件</div>
 			  <div class="tab-pane fade" id="T5" role="tabpanel" aria-labelledby="contact-tab">常見問答</div>
