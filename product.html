@@ -400,6 +400,7 @@
 	</div-->
 	<div class="container-fluid">
 		<div class="row">
+		<div class="col-md-12 d-md-none" onclick="sidebar('show')">進階搜尋></div>
 			<div id="sidebar" class="col-md-3 d-none d-md-block">
 			  <div class="input-group">
 				  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
@@ -506,6 +507,7 @@
 					USB3.0
 				  </label>
 				</div>
+				<div class="col-md-12 d-md-none text-center"><div class="btn btn-primary" onclick="sidebar('hide')">送出查詢</div></div>
 			</div>
 			<div class="col-md-9 col-sm-12">
 				<div class="row">
@@ -701,6 +703,15 @@
 		$(".compare").hide();
 		localStorage.setItem("product-compare", JSON.stringify([]));
 	});
+	
+	function sidebar(type){
+		if(type == "show"){
+			$("#sidebar").removeClass('d-none');
+		}else{
+			$("#sidebar").addClass('d-none');
+		}
+	}
+	
 	/*
 	function getCookie(cname) {
 		var name = cname + "=";

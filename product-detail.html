@@ -83,7 +83,7 @@
 	}
 	
 	.table-title{
-		color: #FFFFFF;
+		//color: #FFFFFF;
 		font-size:16px;
 		font-weight:500;
 	}
@@ -95,6 +95,82 @@
 		font-weight:500;
 	}
 	
+	.table-header.active{
+		background-color: white;
+		color: #2F4D6A;
+		font-size:16px;
+		font-weight:500;
+	}
+	
+	.btn-primary{
+		color:white!important;
+	}
+	
+	.download-table{
+		color: #555656;
+		font-size: 16px;
+		font-weight:500;
+	}
+	
+	.download-table th:nth-child(1){
+		width:20%;
+	}
+	
+	.download-table th:nth-child(2){
+		width:10%;
+	}
+	
+	.download-table th:nth-child(3){
+		width:20%;
+	}
+	
+	.download-table th:nth-child(4){
+		width:40%;
+	}
+	
+	.download-table th:nth-child(5){
+		width:10%;
+	}
+	
+	#T4{
+		font-size:16px;
+		font-weight:500;
+	}
+	
+	#T4 img{
+		width:100%;
+	}
+	
+	[data-toggle="collapse"] img{
+		max-height:10px;
+	}
+	
+	[aria-expanded="true"] .table-header{
+		background-color: white;
+	}
+	
+	.card-body td{
+		color: #3F3F3F;
+		font-weight:bold;
+	}
+	
+	.card-body td:nth-child(1){
+		min-width:25%;
+	}
+	
+	.card-body td:nth-child(2){
+		min-width:75%;
+	}
+	
+	.card-body .table > tbody > tr:first-child > td {
+		border: none;
+	}
+	blockquote{
+		border-left:4px solid #356796;
+		padding-left:15px;
+		font-size:16px;
+		font-weight:bold;
+	}
   </style>
   <body>
   <div class="container-fluid">
@@ -104,15 +180,15 @@
 		<div id="main" class="row">
 			<div class="col-md-1"></div>
 			<div id="left" class="col-md-5">
-				<div class="row">
+				<div class="row mb-3">
 					<div class="col-md-12">AN240</div>
 					<div class="col-md-12"><img src="images/AN240_feature_01.jpg"></div>
 				</div>
 				<div class="row">
-					<div class="col-md-3 col-sm-3"><img src="images/AN240_feature_02.jpg"></div>
-					<div class="col-md-3 col-sm-3"><img src="images/AN240_feature_02.jpg"></div>
-					<div class="col-md-3 col-sm-3"><img src="images/AN240_feature_02.jpg"></div>
-					<div class="col-md-3 col-sm-3"><img src="images/AN240_feature_02.jpg"></div>
+					<div class="col-md-3 col-sm-3 col-3"><img src="images/AN240_feature_02.jpg"></div>
+					<div class="col-md-3 col-sm-3 col-3"><img src="images/AN240_feature_02.jpg"></div>
+					<div class="col-md-3 col-sm-3 col-3"><img src="images/AN240_feature_02.jpg"></div>
+					<div class="col-md-3 col-sm-3 col-3"><img src="images/AN240_feature_02.jpg"></div>
 				</div>
 			</div>
 			<div class="col-md-5">
@@ -146,43 +222,48 @@
 			</div>
 			<div class="col-md-1"></div>
 		</div>
-		<div class="row mx-auto mt-3">
+		<div class="row mx-auto mt-3 mb-3">
 			<ul class="nav nav-tabs mx-auto" id="myTab" role="tablist">
 			  <li class="nav-item">
-				<a class="nav-link active" id="home-tab" data-toggle="tab" href="#T1" role="tab" aria-controls="1" aria-selected="true">產品特色</a>
+				<a class="nav-link active" id="T1-tab" data-toggle="tab" href="#T1" role="tab" aria-controls="1" aria-selected="true">產品特色</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" id="home2-tab" data-toggle="tab" href="#T2" role="tab" aria-controls="2" aria-selected="false">產品規格</a>
+				<a class="nav-link" id="T2-tab" data-toggle="tab" href="#T2" role="tab" aria-controls="2" aria-selected="false">產品規格</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" id="contact-tab" data-toggle="tab" href="#T3" role="tab" aria-controls="3" aria-selected="false">下載</a>
+				<a class="nav-link" id="T3-tab" data-toggle="tab" href="#T3" role="tab" aria-controls="3" aria-selected="false">下載</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" id="contact-tab" data-toggle="tab" href="#T4" role="tab" aria-controls="4" aria-selected="false">配件</a>
+				<a class="nav-link" id="T4-tab" data-toggle="tab" href="#T4" role="tab" aria-controls="4" aria-selected="false">配件</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" id="contact-tab" data-toggle="tab" href="#T5" role="tab" aria-controls="5" aria-selected="false">常見問答</a>
+				<a class="nav-link" id="T5-tab" data-toggle="tab" href="#T5" role="tab" aria-controls="5" aria-selected="false">常見問答</a>
 			  </li>
 			</ul>
 		</div>
 		<div class="row">
 			<div class="tab-content col-md-12" id="myTabContent">
-			  <div class="tab-pane fade show active" id="T1" role="tabpanel" aria-labelledby="home-tab">產品特色</div>
-			  <div class="tab-pane fade" id="T2" role="tabpanel" aria-labelledby="profile-tab">
-			  
-			  產品規格
-
+			  <div class="tab-pane fade show active" id="T1" role="tabpanel" aria-labelledby="T1-tab">產品特色</div>
+			  <div class="tab-pane fade" id="T2" role="tabpanel" aria-labelledby="T2-tab">
+			 <div class="row">
+			 <div class="col-md-1"></div>
+			 <div class="col-md-10">
+			 <!--start-->
 			  <div class="accordion" id="accordionExample">
 				  <div class="card">
 					<div class="card-header table-header" id="headingOne">
 						<span class="table-title">基本規格</span>
 						<div class=" float-md-right" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
-						  ﹀
+						  <img class="up" src="images/icon_up.png">
+						  <img class="down" src="images/icon_down.png">
 						</div>
 					</div>
 					<div id="collapse1" class="collapse show" aria-labelledby="headingOne" >
 					  <div class="card-body" style="background-color: #FAFAFA;">
-						<table>
+						<table class="table">
+							<tbody>
+								<tr><td style="width:25%;">超音波重疊進紙偵測</td><td style="width:75%;">有</td></tr>
+							</tbody>
 							<tbody>
 								<tr><td style="width:25%;">超音波重疊進紙偵測</td><td style="width:75%;">有</td></tr>
 							</tbody>
@@ -194,7 +275,8 @@
 					<div class="card-header table-header" id="headingOne">
 						<span class="table-title">特色</span>
 						<div class=" float-md-right" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
-						  ﹀
+						 <img class="up" src="images/icon_up.png">
+						  <img class="down" src="images/icon_down.png">
 						</div>
 					</div>
 					<div id="collapse2" class="collapse show" aria-labelledby="headingOne" >
@@ -208,12 +290,195 @@
 					</div>
 				  </div>
 				</div>
+				 <!--end-->
+				 </div>
+				 <div class="col-md-1"></div>
+				</div>
 			  </div>
-			  <div class="tab-pane fade" id="T3" role="tabpanel" aria-labelledby="contact-tab">下載</div>
-			  <div class="tab-pane fade" id="T4" role="tabpanel" aria-labelledby="contact-tab">配件</div>
-			  <div class="tab-pane fade" id="T5" role="tabpanel" aria-labelledby="contact-tab">常見問答</div>
+			 <div class="tab-pane fade" id="T3" role="tabpanel" aria-labelledby="T3-tab">
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10"><blockquote>驅動程式</blockquote></div>
+					<div class="col-md-1"></div>
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<table class="table download-table">
+							<thead>
+								<tr>
+									<th>名稱</th>
+									<th>版本</th>
+									<th>文件大小</th>
+									<th>系統相容</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>AN240</td>
+									<td>VB21</td>
+									<td>26MB</td>
+									<td>WinXP/Vista/Win7</td>
+									<td><a class="btn btn-primary">下載</a></td>
+								</tr>
+								<tr>
+									<td>AN240</td>
+									<td>VB21</td>
+									<td>26MB</td>
+									<td>WinXP/Vista/Win7</td>
+									<td><a class="btn btn-primary">下載</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+				<div class="row">
+				</div>
+				<div class="row">
+				</div>
+			  </div>
+			  <div class="tab-pane fade" id="T4" role="tabpanel" aria-labelledby="T4-tab">
+				  <div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-10">
+						  <div class="row">
+							<div class="col-md-4">
+								<div class="card">
+								  <div class="card-body">
+									<div class="row text-center">
+										<div class="col-md-12 pb-2">
+											<img src="images/accessories_01.png">
+										</div>
+										<div class="col-md-12 pb-1">
+											超音波重疊進紙
+										</div>
+										<div class="col-md-12 pb-2">
+											每份文件內含5個文件護套，建議只用壽命:100次
+										</div>
+										<div class="col-md-12 pb-1">
+											<a class="btn btn-outline-secondary btn-block">聯絡我們</a>
+										</div>
+									</div>
+								  </div>
+								  </div>
+							</div>
+							<div class="col-md-4">
+								<div class="card">
+								  <div class="card-body">
+									<div class="row text-center">
+										<div class="col-md-12 pb-2">
+											<img src="images/accessories_01.png">
+										</div>
+										<div class="col-md-12 pb-1">
+											超音波重疊進紙
+										</div>
+										<div class="col-md-12 pb-2">
+											每份文件內含5個文件護套，建議只用壽命:100次
+										</div>
+										<div class="col-md-12 pb-1">
+											<a class="btn btn-outline-secondary btn-block">聯絡我們</a>
+										</div>
+									</div>
+								  </div>
+								  </div>
+							</div>
+							<div class="col-md-4">
+								<div class="card">
+								  <div class="card-body">
+									<div class="row text-center">
+										<div class="col-md-12 pb-2">
+											<img src="images/accessories_01.png">
+										</div>
+										<div class="col-md-12 pb-1">
+											超音波重疊進紙
+										</div>
+										<div class="col-md-12 pb-2">
+											每份文件內含5個文件護套，建議只用壽命:100次
+										</div>
+										<div class="col-md-12 pb-1">
+											<a class="btn btn-outline-secondary btn-block">聯絡我們</a>
+										</div>
+									</div>
+								  </div>
+								  </div>
+							</div>
+						  </div>
+					</div>
+				  </div>
+			  </div>
+			  <div class="tab-pane fade" id="T5" role="tabpanel" aria-labelledby="T5-tab">
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<blockquote>軟體常見問題</blockquote>
+						<div class="accordion mb-4" id="QAsoftware">
+						  <div class="card">
+							<div class="card-header table-header" id="headingOne">
+								<span class="table-title">安裝後如何確認掃描器已成功連接至電腦</span>
+								<div class=" float-md-right" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+								  <img class="up" src="images/icon_up.png">
+								  <img class="down" src="images/icon_down.png">
+								</div>
+							</div>
+							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" >
+							  <div class="card-body" style="background-color: #FAFAFA;">
+								安裝後如何確認掃描器已成功連接至電腦
+							  </div>
+							</div>
+						  </div>
+						  <div class="card">
+							<div class="card-header table-header" id="headingOne">
+								<span class="table-title">安裝後如何確認掃描器已成功連接至電腦</span>
+								<div class=" float-md-right" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+								 <img class="up" src="images/icon_up.png">
+								  <img class="down" src="images/icon_down.png">
+								</div>
+							</div>
+							<div id="collapse2" class="collapse show" aria-labelledby="headingOne" >
+							  <div class="card-body" style="background-color: #FAFAFA;">
+								安裝後如何確認掃描器已成功連接至電腦
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<blockquote>硬體常見問題</blockquote>
+						<div class="accordion mb-4" id="QAsoftware">
+						  <div class="card">
+							<div class="card-header table-header" id="headingOne">
+								<span class="table-title">安裝後如何確認掃描器已成功連接至電腦</span>
+								<div class=" float-md-right" data-toggle="collapse" data-target="#hardware1" aria-expanded="true" aria-controls="collapseOne">
+								  <img class="up" src="images/icon_up.png">
+								  <img class="down" src="images/icon_down.png">
+								</div>
+							</div>
+							<div id="hardware1" class="collapse show" aria-labelledby="headingOne" >
+							  <div class="card-body" style="background-color: #FAFAFA;">
+								安裝後如何確認掃描器已成功連接至電腦
+							  </div>
+							</div>
+						  </div>
+						  <div class="card">
+							<div class="card-header table-header" id="headingOne">
+								<span class="table-title">安裝後如何確認掃描器已成功連接至電腦</span>
+								<div class=" float-md-right" data-toggle="collapse" data-target="#hardware2" aria-expanded="true" aria-controls="collapseOne">
+								 <img class="up" src="images/icon_up.png">
+								  <img class="down" src="images/icon_down.png">
+								</div>
+							</div>
+							<div id="hardware2" class="collapse show" aria-labelledby="headingOne" >
+							  <div class="card-body" style="background-color: #FAFAFA;">
+								安裝後如何確認掃描器已成功連接至電腦
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+			  </div>
 			</div>
-			</div>
+		</div>
 	</div>
     <!--div class="bread">
 		產品 > 掃描器 > 生產及掃瞄儀 > AN240
@@ -249,6 +514,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script>
+	$('.down').hide();
 	$(".compare").hide();
 	var json_str = localStorage.getItem("product-compare");
 	
@@ -291,6 +557,19 @@
 		$(".compare").hide();
 		localStorage.setItem("product-compare", JSON.stringify([]));
 	});
+	
+	$('[data-toggle="collapse"]').click(function(){
+		if($(this).attr('aria-expanded') == 'true'){
+			$(this).find('.down').show();
+			$(this).find('.up').hide();
+			$(this).closest('.table-header').addClass('active');
+		}else{
+			$(this).find('.down').hide();
+			$(this).find('.up').show();
+			$(this).closest('.table-header').removeClass('active');
+		}
+	});
+	
 	/*
 	function getCookie(cname) {
 		var name = cname + "=";
