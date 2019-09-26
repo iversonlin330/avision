@@ -19,44 +19,51 @@
 			<form action="create.php" method="post">
 			  <div class="form-group">
 				<label for="exampleInputEmail1">產品名稱</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="產品名稱">
+				<input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="產品名稱">
 			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">產品型號</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="產品型號">
+				<input type="text" class="form-control" name="model" aria-describedby="emailHelp" placeholder="產品型號">
+			  </div>
+			  <div class="form-group">
+				<label for="exampleFormControlSelect2">產品類別</label>
+				<select class="form-control" name="type_id" required>
+				  <option value="1">印表機</option>
+				  <option value="2">掃描器</option>
+				</select>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">產品精選圖片</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="產品精選圖片">
+				<input type="text" class="form-control" name="picture" aria-describedby="emailHelp" placeholder="產品精選圖片" required>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleFormControlSelect2">Flag</label>
-				<select class="form-control" id="exampleFormControlSelect2">
-				  <option>新產品</option>
-				  <option>發燒產品</option>
+				<select class="form-control" name="flag" required>
+				  <option value="1">新產品</option>
+				  <option value="2">發燒產品</option>
 				</select>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">產品簡介</label>
-				<textarea type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="產品簡介"></textarea>
+				<textarea type="email" class="form-control" name="description" aria-describedby="emailHelp" placeholder="產品簡介" required></textarea>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleFormControlSelect2">產品狀態</label>
-				<select class="form-control" id="exampleFormControlSelect2">
-				  <option>顯示</option>
-				  <option>不顯示</option>
+				<select class="form-control" name="status" required>
+				  <option value="1">顯示</option>
+				  <option value="0">不顯示</option>
 				</select>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleFormControlSelect2">總覽篩選</label>
-				<select multiple class="form-control" id="exampleFormControlSelect2">
+				<select multiple class="form-control" id="exampleFormControlSelect2" required>
 				  <option>顯示</option>
 				  <option>不顯示</option>
 				</select>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">產品特色</label>
-				<textarea type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="產品特色"></textarea>
+				<textarea type="text" class="form-control" name="characteristic" aria-describedby="emailHelp" placeholder="產品特色" required></textarea>
 			  </div>
 			  <button type="submit" class="btn btn-primary">Submit</button>
 			</form>
