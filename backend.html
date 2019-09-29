@@ -7,14 +7,61 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/backend.css">
 
     <title>Backend</title>
   </head>
   <style>
+  
   </style>
   <body>
-	<div class="container-fluid">
-		<div class="row">
+	<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Avision </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">產品</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">產品規格</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <!--nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav-->
+
+      <div class="container-fluid">
+        <div class="row">
 			<div class="col-12">
 			<form action="create.php" method="post">
 			  <div class="form-group">
@@ -34,7 +81,7 @@
 			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">產品精選圖片</label>
-				<input type="text" class="form-control" name="picture" aria-describedby="emailHelp" placeholder="產品精選圖片" required>
+				<input type="file" class="form-control" name="picture" aria-describedby="emailHelp" placeholder="產品精選圖片" required>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleFormControlSelect2">Flag</label>
@@ -56,7 +103,7 @@
 			  </div>
 			  <div class="form-group">
 				<label for="exampleFormControlSelect2">總覽篩選</label>
-				<select multiple class="form-control" id="exampleFormControlSelect2" required>
+				<select class="form-control" id="exampleFormControlSelect2" required>
 				  <option>顯示</option>
 				  <option>不顯示</option>
 				</select>
@@ -65,11 +112,95 @@
 				<label for="exampleInputEmail1">產品特色</label>
 				<textarea type="text" class="form-control" name="characteristic" aria-describedby="emailHelp" placeholder="產品特色" required></textarea>
 			  </div>
+			   <div class="form-group">
+				<label for="exampleInputEmail1">列點特色一</label>
+				<input type="text" class="form-control" name="picture" aria-describedby="emailHelp" placeholder="列點特色一" required>
+			  </div>
+			  <div class="form-group">
+				<label for="exampleInputEmail1">列點特色二</label>
+				<input type="text" class="form-control" name="picture" aria-describedby="emailHelp" placeholder="列點特色二" required>
+			  </div>
+			  <div class="form-group">
+				<label for="exampleInputEmail1">列點特色三</label>
+				<input type="text" class="form-control" name="picture" aria-describedby="emailHelp" placeholder="列點特色三" required>
+			  </div>
 			  <button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 			</div>
 		</div>
-	</div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  
+	<!--div class="container-fluid">
+		<div class="row">
+			<div class="col-3 sidebar">
+				<a href="#">About</a>
+				<a href="#">Services</a>
+				<a href="#">Clients</a>
+				<a href="#">Contact</a>
+			</div>
+			<div class="col-9">
+				<div class="row">
+					<div class="col-12">
+					<form action="create.php" method="post">
+					  <div class="form-group">
+						<label for="exampleInputEmail1">產品名稱</label>
+						<input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="產品名稱">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">產品型號</label>
+						<input type="text" class="form-control" name="model" aria-describedby="emailHelp" placeholder="產品型號">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleFormControlSelect2">產品類別</label>
+						<select class="form-control" name="type_id" required>
+						  <option value="1">印表機</option>
+						  <option value="2">掃描器</option>
+						</select>
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">產品精選圖片</label>
+						<input type="text" class="form-control" name="picture" aria-describedby="emailHelp" placeholder="產品精選圖片" required>
+					  </div>
+					  <div class="form-group">
+						<label for="exampleFormControlSelect2">Flag</label>
+						<select class="form-control" name="flag" required>
+						  <option value="1">新產品</option>
+						  <option value="2">發燒產品</option>
+						</select>
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">產品簡介</label>
+						<textarea type="email" class="form-control" name="description" aria-describedby="emailHelp" placeholder="產品簡介" required></textarea>
+					  </div>
+					  <div class="form-group">
+						<label for="exampleFormControlSelect2">產品狀態</label>
+						<select class="form-control" name="status" required>
+						  <option value="1">顯示</option>
+						  <option value="0">不顯示</option>
+						</select>
+					  </div>
+					  <div class="form-group">
+						<label for="exampleFormControlSelect2">總覽篩選</label>
+						<select multiple class="form-control" id="exampleFormControlSelect2" required>
+						  <option>顯示</option>
+						  <option>不顯示</option>
+						</select>
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">產品特色</label>
+						<textarea type="text" class="form-control" name="characteristic" aria-describedby="emailHelp" placeholder="產品特色" required></textarea>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
